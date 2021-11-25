@@ -41,6 +41,7 @@ class TestAutodoc(TestCase):
 
     def test_parse_response(self):
         """ Should parse WebTest response. """
+        autodoc.clear()
         res = self.client.post_json('/', params={'message': 'foo'})
         autodoc.parse('POST /', res)
 
